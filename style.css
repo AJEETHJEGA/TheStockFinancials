@@ -1,0 +1,82 @@
+.socialicon img {
+    width: 35px;
+  }
+  .ll {
+    gap: 4%;
+  }
+  .hm {
+    text-align: center;
+  }
+  .textcenter {
+    text-align: center;
+  }
+  
+  .indiaindux {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    color: #1289A7;
+  }
+  
+  .indiaindux::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Position the line at the center of the text */
+    transform: translateX(-50%);
+    width: 50%; /* Set the width to half of the text width */
+    border-bottom: 2px solid #1289A7;
+  }
+  .colstyle{
+    
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+  }
+  div.col.colstyle1{
+    padding:0;
+  }
+  .colgap{
+    column-gap: 2em;
+    padding-left: 2em;
+  }
+  .green-text {
+    color: rgb(7, 224, 7);
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  .heatmap{
+    column-width: auto;
+    
+  }
+
+  .footer{
+    
+    text-align: center;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+  }
+
+  .Dark-green {
+    background-color: rgb(4, 143, 4);
+    color: white;
+}
+
+.light-green {
+    background-color: lightgreen;
+    color: white;
+}
+
+.Dark-red {
+    background-color: rgb(219, 6, 6);
+    color: white;
+}
+
+.light-red {
+    background-color: lightcoral;
+    color: white;
+}

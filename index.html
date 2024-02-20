@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nifty 50 Data</title>
+  <!-- Bootstrap CSS -->
+ <!-- Bootstrap CSS -->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Custom CSS -->
+ <link rel="stylesheet" href="style.css">
+ <!-- MDB CSS -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row p-2 bg-black" style="font-size: 14px;background-color: black;">
+      <div id="current_date" class="col text-white">
+
+      </div>
+      <div class="col-md-auto text-white">About</div>
+      <div class="col-md-auto text-white">Advertise</div>
+      <div class="col-md-auto text-white">Privacy & Policy</div>
+      <div class="col-md-auto text-white">Contact Us</div>
+    </div>
+
+    <div class="row bg-White">
+      <div class="col p-3 socialicon">
+        <div style="display: flex;">
+          <img src="./Images/facebook.svg" alt="Facebook" class="px-2">
+          <img src="./Images/x-twitter.svg" alt="x-twitter" class="px-2">
+          <img src="./Images/instagram.svg" alt="instagram" class="px-2">
+          <img src="./Images/youtube.svg" alt="youtube" class="px-2">
+        </div>
+      </div>
+      <div class="col p-3 d-flex justify-content-end">
+        <h3>The Stock Finacials</h3>
+      </div>
+      <div class="col-md-3">
+        <nav class="navbar pt-3 pl-6 ">
+          <div class="container-fluid justify-content-end">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-auto p-3 d-flex justify-content-end">
+        <div>
+          <button class="btn"
+            style="color: white; background-color: red; border: 1px solid red; margin-right: 8px; transition: border-color 0.3s;">Login</button>
+          <button class="btn"
+            style="color: white; background-color: red; border: 1px solid red; transition: border-color 0.3s;">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-4 fw-bold ll">
+      <div class="text-center hm"><a href="/index.html">Home</a></div>
+      <div class="text-center hm">News/Blogs</div>
+      <div class="text-center hm"><a href="screener.html">Screener</a></div>
+      <div class="text-center hm">Mutual Funds</div>
+      <div class="text-center hm">Finance/Investing</div>
+      <div class="text-center hm">Forex</div>
+      <div class="text-center hm">Crypto</div>
+      <div class="text-center hm">Technology</div>
+    </div>
+    <!-- Include your Test component HTML here -->
+  </div>
+
+  <hr>
+  <div class="textcenter">
+    <p class="indiaindux">Indian Indices</p>
+  </div>
+
+
+  <div class="container">
+    <div class="colgap row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+      <div class="col colstyle">
+        <div class="">SENSEX</div>
+        <div class="row">
+        <div id="sensexContainer" class="col"></div>
+  <!--     <div id="sensexContainer" class="row col"><div>up</div>0.25%</div>--> 
+      </div>
+      </div>
+      <div class="col colstyle">
+        <div class="">NIFTY50</div>
+        <div id="nifty50Container"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">NIFTY Bank</div>
+        <div id="niftyBankContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">NIFTY IT</div>
+        <div id="niftyItContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">NIFTY AUTO</div>
+        <div id="niftyAutoContainer"></div>
+      </div>
+
+    </div>
+  </div>
+<br>
+
+  <div class="textcenter">
+    <p class="indiaindux">Global Indices</p>
+  </div>
+
+
+  
+  
+
+
+
+  <div class="container ">
+    <div class="colgap row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+      <div class="col colstyle">
+        <div class="">S&P 500</div>
+        <div id="s&p500Container"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">Nasdaq</div>
+        <div id="NasdaqContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">Dow Jones</div>
+        <div id="DowJonesContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">Nikkei 225</div>
+        <div id="NikkeiContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">FTSE</div>
+        <div id="FTSEContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">CAC</div>
+        <div id="CACContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">DAX</div>
+        <div id="DAXContainer"></div>
+      </div>
+    </div>
+  </div>
+<br>
+
+  <div class="textcenter">
+    <p class="indiaindux">Commodities</p>
+  </div>
+  <div class="container">
+    <div class="colgap row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+      <div class="col colstyle">
+        <div class="">GOLD</div>
+        <div id="goldContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">SILVER</div>
+        <div id="silverContainer"></div>
+      </div>
+      
+      <div class="col colstyle">
+        <div class="">Crude</div>
+        <div id="crudeContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">Brent</div>
+        <div id="brentContainer"></div>
+      </div>
+    </div>
+  </div>
+<br>
+
+  <div class="textcenter">
+    <p class="indiaindux">Currencies</p>
+  </div>
+  <div class="container">
+    <div class="colgap row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+      <div class="col colstyle">
+        <div class="">Dollar Index</div>
+        <div id="dollarContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">USD/INR</div>
+        <div id="usdinrContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">EUR/USD</div>
+        <div id="eurusdContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">GBP/INR</div>
+        <div id="gbpinrContainer"></div>
+      </div>
+      <div class="col colstyle">
+        <div class="">EUR/INR</div>
+        <div id="eurinrContainer"></div>
+      </div>
+
+    </div>
+  </div>
+<br>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+    <div id="niftyChart"></div>
+    <div id="sensexChart"></div>
+    </div>
+    <div class="col-sm-6 ">
+      <br>
+      <div>Nifty50 HeatMap</div>
+      <br>
+      <br>
+      <div class="heatmap row row-cols-4">
+        <div class="col colstyle1">
+          
+          <div id="RELIANCE"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="TCS"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="HDFC"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="INFY"></div>
+      </div>
+      <div class="col colstyle1">
+          <div id="HDFCBANK"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="ICICIBANK"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="HINDUNILVR"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="BHARTIARTL"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="KOTAKBANK"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="ITC"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="LT"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="AXISBANK"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="SBIN"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="MARUTI"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="TECHM"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="BAJFINANCE"></div>
+      </div>
+      <div class="col colstyle1">
+      
+          <div id="ULTRACEMCO"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="POWERGRID"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="ASIANPAINT"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="INDUSINDBK"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="HCLTECH"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="BAJAJFINSV"></div>
+      </div>
+      <div class="col colstyle1">
+          
+          <div id="TATASTEEL"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="BRITANNIA"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="COALINDIA"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="SBILIFE"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="NESTLEIND"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="ONGC"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="TITAN"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="DIVISLAB"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="UPL"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="WIPRO"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="SHREECEM"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="GRASIM"></div>
+      </div>
+      <div class="col colstyle1">
+         
+          <div id="IOC"></div>
+      </div>
+      <div class="col colstyle1">
+      
+          <div id="NTPC"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="HDFCLIFE"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="CIPLA"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="DRREDDY"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="SUNPHARMA"></div>
+      </div>
+      <div class="col colstyle1">
+     
+          <div id="BAJAJ-AUTO"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="HINDALCO"></div>
+      </div>
+      <div class="col colstyle1">
+        
+          <div id="ADANIPORTS"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="IOC"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="EICHERMOT"></div>
+      </div>
+      <div class="col colstyle1">
+       
+          <div id="BAJAJFINSV"></div>
+      </div>
+      <div class="col colstyle1">
+      
+        <div id="JSWSTEEL"></div>
+    </div>
+    <div class="col colstyle1">
+     
+        <div id="LTTS"></div>
+    </div>
+    <div class="col colstyle1">
+
+        <div id="ADANIENT"></div>
+    </div>
+    <div class="col colstyle1">
+     
+        <div id="APOLLOHOSP"></div>
+    </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="container-fluid footer">&copy; 2024 The Stock Financials.All Rights Reserved.</div>
+  <script>
+    function fetchStatus(indexName, containerId) {
+      // Fetch JSON data from the specified URL
+      fetch(`http://localhost:8000/${indexName}`)
+        .then(response => response.json())
+        .then(data => {
+          // Manipulate the DOM with the JSON data
+          const dataContainer = document.getElementById(containerId);
+          dataContainer.innerHTML = ''; // Clear previous content
+
+          if (data && data.current_data.Close&& data.previous_close) {
+            // Iterate over "Close" data and display it
+            for (const timestamp in data.current_data.Close) {
+              const closeValue = data.current_data.Close[timestamp];
+              const previousClose = data.previous_close;
+              const percentageChange = ((closeValue - previousClose) / previousClose) * 100;
+              const arrowSymbol = percentageChange >= 0 ? '&#11165;' : '&#11167;';
+              const percentageChangeText = percentageChange >= 0 ? `${percentageChange.toFixed(2)}%` : `${percentageChange.toFixed(2)}%`;
+              const itemElement = document.createElement('div');
+              itemElement.innerHTML = `<span class="${percentageChange >= 0 ? 'green-text' : 'red-text'}">${closeValue.toFixed(2)} &nbsp; &nbsp;${arrowSymbol} ${percentageChangeText}</span>`;
+              dataContainer.appendChild(itemElement);
+            }
+          } else {
+            // If "Close" data is missing or empty, display an error message
+            const errorMessage = document.createElement('div');
+            errorMessage.textContent = 'Close data not found.';
+            dataContainer.appendChild(errorMessage);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+
+    }
+    window.addEventListener('load', function () {
+      // Your document is loaded.
+      var fetchInterval = 1; // 5 seconds.
+      const indices = [
+        { name: 'nifty50', id: 'nifty50Container' },
+        { name: 'sensex', id: 'sensexContainer' },
+        { name: 'banknifty', id: 'niftyBankContainer' },
+        { name: 'niftyit', id: 'niftyItContainer' },
+        { name: 'niftyauto', id: 'niftyAutoContainer' },
+        { name: 's&p500', id: 's&p500Container' },
+        { name: 'nasdaq', id: 'NasdaqContainer' },
+        { name: 'dowjones', id: 'DowJonesContainer' },
+        { name: 'nikkei', id: 'NikkeiContainer' },
+        { name: 'ftse', id: 'FTSEContainer' },
+        { name: 'cac', id: 'CACContainer' },
+        { name: 'dax', id: 'DAXContainer' },
+        { name: 'gold', id: 'goldContainer' },
+        { name: 'silver', id: 'silverContainer' },
+        { name: 'crude', id: 'crudeContainer' },
+        { name: 'brent', id: 'brentContainer' },
+        { name: 'dollarindex', id: 'dollarContainer' },
+        { name: 'usdinr', id: 'usdinrContainer' },
+        { name: 'eurusd', id: 'eurusdContainer' },
+        { name: 'gbpinr', id: 'gbpinrContainer' },
+        { name: 'eurinr', id: 'eurinrContainer' },
+        // Add more indices as needed
+      ];
+      // Invoke the request every 5 seconds.
+      indices.forEach(index => setInterval(() => fetchStatus(index.name.toLowerCase(), index.id), fetchInterval * 1000));
+    });
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("current_date").innerHTML = new Date().toLocaleDateString('en-US', options);
+
+    fetch(`http://localhost:8000/niftyhistory`)
+    .then(response => response.json())
+    .then(data => {
+        // Extracting data for chart
+        const dates = data.map(item => new Date(item.Date));
+        const openPrices = data.map(item => item.Open);
+        const highPrices = data.map(item => item.High);
+        const lowPrices = data.map(item => item.Low);
+        const closePrices = data.map(item => item.Close);
+
+    // Create candlestick trace
+    const trace = {
+      x: dates,
+      close: closePrices,
+      high: highPrices,
+      low: lowPrices,
+      open: openPrices,
+      type: 'candlestick',
+      xaxis: 'x',
+      yaxis: 'y',
+      name: 'Nifty 50'
+    };
+
+    // Layout options
+    const layout = {
+      title: 'Nifty 50 Chart',
+      xaxis: {
+        title: 'Date'
+      },
+      yaxis: {
+        title: 'Price'
+      }
+    };
+
+    // Plot the chart
+    Plotly.newPlot('niftyChart', [trace], layout);
+  })
+  .catch(error => {
+          console.error('Error fetching data:', error);
+  });
+
+  fetch(`http://localhost:8000/sensexhistory`)
+    .then(response => response.json())
+    .then(data => {
+        // Extracting data for chart
+        const dates = data.map(item => new Date(item.Date));
+        const openPrices = data.map(item => item.Open);
+        const highPrices = data.map(item => item.High);
+        const lowPrices = data.map(item => item.Low);
+        const closePrices = data.map(item => item.Close);
+
+    // Create candlestick trace
+    const trace = {
+      x: dates,
+      close: closePrices,
+      high: highPrices,
+      low: lowPrices,
+      open: openPrices,
+      type: 'candlestick',
+      xaxis: 'x',
+      yaxis: 'y',
+      name: 'Sensex'
+    };
+
+    // Layout options
+    const layout = {
+      title: 'Sensex Chart',
+      xaxis: {
+        title: 'Date'
+      },
+      yaxis: {
+        title: 'Price'
+      }
+    };
+
+    // Plot the chart
+    Plotly.newPlot('sensexChart', [trace], layout);
+  })
+  .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+
+  
+function fetchStockData1(symbol, containerId) {
+    fetch(`http://localhost:8000/${containerId}`)
+        .then(response => response.json())
+        .then(data => {
+            const dataContainer = document.getElementById(containerId);
+            dataContainer.innerHTML = ''; // Clear previous content
+            if (data[symbol] && data[symbol].length > 0) {
+                const previousClose = data[symbol][0].Close;
+                const closeValue = data[symbol][1].Close;
+
+                const percentageChange = ((closeValue - previousClose) / previousClose) * 100;
+              const arrowSymbol = percentageChange >= 0 ? '&#11165;' : '&#11167;';
+              const percentageChangeText = percentageChange >= 0 ? `${percentageChange.toFixed(2)}%` : `${percentageChange.toFixed(2)}%`;
+              const itemElement = document.createElement('div');
+
+              const myDiv = document.getElementById(`${containerId}`);
+  
+              if (percentageChange >=0) {
+                  if(percentageChange >=2){
+                  myDiv.classList.add('Dark-green');
+                } else{
+                  myDiv.classList.add('light-green');
+                }
+              }
+              else {
+                  if(percentageChange <=-2){
+                    myDiv.classList.add('Dark-red');
+                    }else {
+                      myDiv.classList.add('light-red');
+                    }
+                  }
+
+
+              
+               
+
+              // Change the background color
+              const symbolDiv = document.createElement('div');
+                symbolDiv.textContent = containerId;
+                dataContainer.appendChild(symbolDiv);
+              itemElement.innerHTML = `<span>${closeValue.toFixed(2)} &nbsp;${arrowSymbol} ${percentageChangeText}</span>`;
+              dataContainer.appendChild(itemElement);
+            } else {
+                dataContainer.textContent = 'No data available';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+window.addEventListener('load', function () {
+    const stocks = [
+    { symbol: 'RELIANCE.NS', containerId: 'RELIANCE' },
+        { symbol: 'TCS.NS', containerId: 'TCS' },
+        { symbol: 'HDFC.NS', containerId: 'HDFC' },
+        { symbol: 'INFY.NS', containerId: 'INFY' },
+        { symbol: 'HDFCBANK.NS', containerId: 'HDFCBANK' },
+        { symbol: 'ICICIBANK.NS', containerId: 'ICICIBANK' },
+        { symbol: 'HINDUNILVR.NS', containerId: 'HINDUNILVR' },
+        { symbol: 'BHARTIARTL.NS', containerId: 'BHARTIARTL' },
+        { symbol: 'KOTAKBANK.NS', containerId: 'KOTAKBANK' },
+        { symbol: 'ITC.NS', containerId: 'ITC' },
+        { symbol: 'LT.NS', containerId: 'LT' },
+        { symbol: 'AXISBANK.NS', containerId: 'AXISBANK' },
+        { symbol: 'SBIN.NS', containerId: 'SBIN' },
+        { symbol: 'MARUTI.NS', containerId: 'MARUTI' },
+        { symbol: 'TECHM.NS', containerId: 'TECHM' },
+        { symbol: 'BAJFINANCE.NS', containerId: 'BAJFINANCE' },
+        { symbol: 'ULTRACEMCO.NS', containerId: 'ULTRACEMCO' },
+        { symbol: 'POWERGRID.NS', containerId: 'POWERGRID' },
+        { symbol: 'ASIANPAINT.NS', containerId: 'ASIANPAINT' },
+        { symbol: 'INDUSINDBK.NS', containerId: 'INDUSINDBK' },
+        { symbol: 'HCLTECH.NS', containerId: 'HCLTECH' },
+        { symbol: 'BAJAJFINSV.NS', containerId: 'BAJAJFINSV' },
+        { symbol: 'TATASTEEL.NS', containerId: 'TATASTEEL' },
+        { symbol: 'BRITANNIA.NS', containerId: 'BRITANNIA' },
+        { symbol: 'COALINDIA.NS', containerId: 'COALINDIA' },
+        { symbol: 'SBILIFE.NS', containerId: 'SBILIFE' },
+        { symbol: 'NESTLEIND.NS', containerId: 'NESTLEIND' },
+        { symbol: 'ONGC.NS', containerId: 'ONGC' },
+        { symbol: 'TITAN.NS', containerId: 'TITAN' },
+        { symbol: 'DIVISLAB.NS', containerId: 'DIVISLAB' },
+        { symbol: 'UPL.NS', containerId: 'UPL' },
+        { symbol: 'WIPRO.NS', containerId: 'WIPRO' },
+        { symbol: 'SHREECEM.NS', containerId: 'SHREECEM' },
+        { symbol: 'GRASIM.NS', containerId: 'GRASIM' },
+        { symbol: 'IOC.NS', containerId: 'IOC' },
+        { symbol: 'NTPC.NS', containerId: 'NTPC' },
+        { symbol: 'HDFCLIFE.NS', containerId: 'HDFCLIFE' },
+        { symbol: 'CIPLA.NS', containerId: 'CIPLA' },
+        { symbol: 'DRREDDY.NS', containerId: 'DRREDDY' },
+        { symbol: 'SUNPHARMA.NS', containerId: 'SUNPHARMA' },
+        { symbol: 'BAJAJ-AUTO.NS', containerId: 'BAJAJ-AUTO' },
+        { symbol: 'HINDALCO.NS', containerId: 'HINDALCO' },
+        { symbol: 'ADANIPORTS.NS', containerId: 'ADANIPORTS' },
+        { symbol: 'IOC.NS', containerId: 'IOC' },
+        { symbol: 'EICHERMOT.NS', containerId: 'EICHERMOT' },
+        { symbol: 'JSWSTEEL.NS', containerId: 'JSWSTEEL' },
+        { symbol: 'LTTS.NS', containerId: 'LTTS' },
+        { symbol: 'ADANIENT.NS', containerId: 'ADANIENT' },
+        { symbol: 'APOLLOHOSP.NS', containerId: 'APOLLOHOSP' }
+    ];
+
+    const fetchInterval = 1000; // Fetch data every 5 seconds
+
+    stocks.forEach(stock => {
+        fetchStockData1(stock.symbol, stock.containerId);
+        setInterval(() => fetchStockData1(stock.symbol, stock.containerId), fetchInterval);
+    });
+});
+
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS scripts -->
+</body>
+
+</html>

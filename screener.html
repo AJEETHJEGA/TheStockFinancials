@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nifty 50 Data</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- MDB CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row p-2 bg-black" style="font-size: 14px;background-color: black;">
+            <div id="current_date" class="col text-white">
+
+            </div>
+            <div class="col-md-auto text-white">About</div>
+            <div class="col-md-auto text-white">Advertise</div>
+            <div class="col-md-auto text-white">Privacy & Policy</div>
+            <div class="col-md-auto text-white">Contact Us</div>
+        </div>
+
+        <div class="row bg-White">
+            <div class="col p-3 socialicon">
+                <div style="display: flex;">
+                    <img src="./Images/facebook.svg" alt="Facebook" class="px-2">
+                    <img src="./Images/x-twitter.svg" alt="x-twitter" class="px-2">
+                    <img src="./Images/instagram.svg" alt="instagram" class="px-2">
+                    <img src="./Images/youtube.svg" alt="youtube" class="px-2">
+                </div>
+            </div>
+            <div class="col p-3 d-flex justify-content-end">
+                <h3>The Stock Finacials</h3>
+            </div>
+            <div class="col-md-3">
+                <nav class="navbar pt-3 pl-6 ">
+                    <div class="container-fluid justify-content-end">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-auto p-3 d-flex justify-content-end">
+                <div>
+                    <button class="btn"
+                        style="color: white; background-color: red; border: 1px solid red; margin-right: 8px; transition: border-color 0.3s;">Login</button>
+                    <button class="btn"
+                        style="color: white; background-color: red; border: 1px solid red; transition: border-color 0.3s;">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-4 fw-bold ll">
+            <div class="text-center hm"><a href="/index.html">Home</a></div>
+            <div class="text-center hm">News/Blogs</div>
+            <div class="text-center hm"><a href="screener.html">Screener</a></div>
+            <div class="text-center hm">Mutual Funds</div>
+            <div class="text-center hm">Finance/Investing</div>
+            <div class="text-center hm">Forex</div>
+            <div class="text-center hm">Crypto</div>
+            <div class="text-center hm">Technology</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Tabs navs -->
+    <ul class="container nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="ex3-tab-1" data-toggle="tab" href="#ex3-tabs-1" role="tab"
+                aria-controls="ex3-tabs-1" aria-selected="true">Chart Patterns</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex3-tab-2" data-toggle="tab" href="#ex3-tabs-2" role="tab"
+                aria-controls="ex3-tabs-2" aria-selected="false">Technical Scans</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex3-tab-3" data-toggle="tab" href="#ex3-tabs-3" role="tab"
+                aria-controls="ex3-tabs-3" aria-selected="false">Fundamental Scans</a>
+        </li>
+    </ul>
+    <!-- Tabs navs -->
+
+    <!-- Tabs content -->
+    <div class="tab-content container" id="ex2-content">
+        <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
+
+
+            <div class="row w-100">
+                <div class="col-3">
+                    <!-- Tab navs -->
+                    <div class="nav flex-column nav-tabs text-start" id="v-tabs-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active" id="cup-with-handle-tab" data-toggle="tab" href="#cup-with-handle"
+                            role="tab" aria-controls="cup-with-handle" aria-selected="true">Cup with Handle</a>
+
+                        <a class="nav-link" id="cup-with-handle-inverted-tab" data-toggle="tab"
+                            href="#cup-with-handle-inverted" role="tab" aria-controls="cup-with-handle-inverted"
+                            aria-selected="false">Cup with Handle Inverted</a>
+
+                        <a class="nav-link" id="double-bottoms-tab" data-toggle="tab" href="#double-bottoms" role="tab"
+                            aria-controls="double-bottoms" aria-selected="false">Double Bottoms</a>
+
+                        <a class="nav-link" id="double-tops-tab" data-toggle="tab" href="#double-tops" role="tab"
+                            aria-controls="double-tops" aria-selected="false">Double Tops</a>
+
+                        <a class="nav-link" id="flags-tab" data-toggle="tab" href="#flags" role="tab"
+                            aria-controls="flags" aria-selected="false">Flags</a>
+
+                        <a class="nav-link" id="gaps-up-tab" data-toggle="tab" href="#gaps-up" role="tab"
+                            aria-controls="gaps-up" aria-selected="false">Gaps Up</a>
+
+                        <a class="nav-link" id="gaps-down-tab" data-toggle="tab" href="#gaps-down" role="tab"
+                            aria-controls="gaps-down" aria-selected="false">Gaps Down</a>
+
+                        <a class="nav-link" id="head-and-shoulders-bottoms-tab" data-toggle="tab"
+                            href="#head-and-shoulders-bottoms" role="tab" aria-controls="head-and-shoulders-bottoms"
+                            aria-selected="false">Head and Shoulders Bottoms</a>
+
+                        <a class="nav-link" id="head-and-shoulders-tops-tab" data-toggle="tab"
+                            href="#head-and-shoulders-tops" role="tab" aria-controls="head-and-shoulders-tops"
+                            aria-selected="false">Head and Shoulders Tops</a>
+
+                        <a class="nav-link" id="ascending-triangles-tab" data-toggle="tab" href="#ascending-triangles"
+                            role="tab" aria-controls="ascending-triangles" aria-selected="false">Ascending Triangles</a>
+
+                        <a class="nav-link" id="descending-triangles-tab" data-toggle="tab" href="#descending-triangles"
+                            role="tab" aria-controls="descending-triangles" aria-selected="false">Descending
+                            Triangles</a>
+
+                        <a class="nav-link" id="symmetrical-triangles-tab" data-toggle="tab"
+                            href="#symmetrical-triangles" role="tab" aria-controls="symmetrical-triangles"
+                            aria-selected="false">Symmetrical Triangles</a>
+
+                        <a class="nav-link" id="triple-bottoms-tab" data-toggle="tab" href="#triple-bottoms" role="tab"
+                            aria-controls="triple-bottoms" aria-selected="false">Triple Bottoms</a>
+
+                        <a class="nav-link" id="triple-tops-tab" data-toggle="tab" href="#triple-tops" role="tab"
+                            aria-controls="triple-tops" aria-selected="false">Triple Tops</a>
+
+                        <a class="nav-link" id="rectangle-bottoms-tab" data-toggle="tab" href="#rectangle-bottoms"
+                            role="tab" aria-controls="rectangle-bottoms" aria-selected="false">Rectangle Bottoms</a>
+
+                        <a class="nav-link" id="rectangle-tops-tab" data-toggle="tab" href="#rectangle-tops" role="tab"
+                            aria-controls="rectangle-tops" aria-selected="false">Rectangle Tops</a>
+
+                        <a class="nav-link" id="falling-wedges-tab" data-toggle="tab" href="#falling-wedges" role="tab"
+                            aria-controls="falling-wedges" aria-selected="false">Falling Wedges</a>
+
+                        <a class="nav-link" id="rising-wedges-tab" data-toggle="tab" href="#rising-wedges" role="tab"
+                            aria-controls="rising-wedges" aria-selected="false">Rising Wedges</a>
+
+                    </div>
+                    <!-- Tab navs -->
+                </div>
+
+                <div class="col-9">
+                    <!-- Tab content -->
+                    <div class="tab-content" id="v-tabs-tabContent">
+                        <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel"
+                            aria-labelledby="v-tabs-home-tab">
+                            Home content
+                        </div>
+                        <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel"
+                            aria-labelledby="v-tabs-profile-tab">
+                            Profile content
+                        </div>
+                        <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel"
+                            aria-labelledby="v-tabs-messages-tab">
+                            Messages content
+                        </div>
+                    </div>
+                    <!-- Tab content -->
+                </div>
+            </div>
+
+
+        </div>
+        <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+            
+
+            <div class="row w-100">
+                <div class="col-3">
+                    <!-- Tab navs -->
+                    <div class="nav flex-column nav-tabs text-start" id="v-tabs-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active" id="cup-with-handle-tab" data-toggle="tab" href="#cup-with-handle"
+                            role="tab" aria-controls="cup-with-handle" aria-selected="true">Coffee Can Investing</a>
+
+                        <a class="nav-link" id="cup-with-handle-inverted-tab" data-toggle="tab"
+                            href="#cup-with-handle-inverted" role="tab" aria-controls="cup-with-handle-inverted"
+                            aria-selected="false">Peter Lynch</a>
+
+                        <a class="nav-link" id="double-bottoms-tab" data-toggle="tab" href="#double-bottoms" role="tab"
+                            aria-controls="double-bottoms" aria-selected="false">Joel Greenblatt's Magic Formula</a>
+
+                        <a class="nav-link" id="double-tops-tab" data-toggle="tab" href="#double-tops" role="tab"
+                            aria-controls="double-tops" aria-selected="false">Piotroski Score</a>
+
+                        <a class="nav-link" id="flags-tab" data-toggle="tab" href="#flags" role="tab"
+                            aria-controls="flags" aria-selected="false">Ben Graham</a>
+
+                        <a class="nav-link" id="gaps-up-tab" data-toggle="tab" href="#gaps-up" role="tab"
+                            aria-controls="gaps-up" aria-selected="false">John Neff</a>
+
+                        <a class="nav-link" id="gaps-down-tab" data-toggle="tab" href="#gaps-down" role="tab"
+                            aria-controls="gaps-down" aria-selected="false">Walter Schloss</a>
+                       
+
+                    </div>
+                    <!-- Tab navs -->
+                </div>
+
+                <div class="col-9">
+                    <!-- Tab content -->
+                    <div class="tab-content" id="v-tabs-tabContent">
+                        <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel"
+                            aria-labelledby="v-tabs-home-tab">
+                            Home content
+                        </div>
+                        <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel"
+                            aria-labelledby="v-tabs-profile-tab">
+                            Profile content
+                        </div>
+                        <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel"
+                            aria-labelledby="v-tabs-messages-tab">
+                            Messages content
+                        </div>
+                    </div>
+                    <!-- Tab content -->
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+        
+
+            <div class="row w-100">
+                <div class="col-3">
+                    <!-- Tab navs -->
+                    <div class="nav flex-column nav-tabs text-start" id="v-tabs-tab" role="tablist"
+                        aria-orientation="vertical">
+                       
+
+                        <a class="nav-link" id="cup-with-handle-inverted-tab" data-toggle="tab"
+                            href="#cup-with-handle-inverted" role="tab" aria-controls="cup-with-handle-inverted"
+                            aria-selected="false">CandleStick Scans</a>
+                       
+
+                    </div>
+                    <!-- Tab navs -->
+                </div>
+
+                <div class="col-9">
+                    <!-- Tab content -->
+                    <div class="tab-content" id="v-tabs-tabContent">
+                        <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel"
+                            aria-labelledby="v-tabs-home-tab">
+                            Home content
+                        </div>
+                        <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel"
+                            aria-labelledby="v-tabs-profile-tab">
+                            Profile content
+                        </div>
+                        <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel"
+                            aria-labelledby="v-tabs-messages-tab">
+                            Messages content
+                        </div>
+                    </div>
+                    <!-- Tab content -->
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-- Tabs content -->
+
+    <div class="container-fluid footer">&copy; 2024 The Stock Financials. All Rights Reserved.</div>
+<script>
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("current_date").innerHTML = new Date().toLocaleDateString('en-US', options);
+</script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- MDB JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
